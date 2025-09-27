@@ -1,0 +1,29 @@
+﻿<svg width="640" height="520" viewBox="0 0 640 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="105" y1="40" x2="450" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF9AC7"/>
+      <stop offset="0.5" stop-color="#FF7A70"/>
+      <stop offset="1" stop-color="#FFC15F"/>
+    </linearGradient>
+    <radialGradient id="g2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(470 130) rotate(135) scale(210)">
+      <stop stop-color="#8ED1FF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ECF5FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="g3" x1="520" y1="80" x2="150" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#4ADE80" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect x="40" y="60" width="560" height="360" rx="64" fill="url(#g1)" opacity="0.92"/>
+  <path d="M520 140C520 195.228 475.228 240 420 240C364.772 240 320 195.228 320 140C320 84.7715 364.772 40 420 40C475.228 40 520 84.7715 520 140Z" fill="url(#g2)"/>
+  <circle cx="198" cy="170" r="120" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="470" cy="340" r="90" fill="#FFFFFF" opacity="0.25"/>
+  <path d="M200 420C200 420 264 360 324 372C384 384 420 452 420 452" stroke="#FFFFFF" stroke-width="28" stroke-linecap="round" opacity="0.6"/>
+  <path d="M156 144C164 104 205 84 272 92C340 100 365 130 360 170" stroke="#FFFFFF" stroke-width="28" stroke-linecap="round" opacity="0.6"/>
+  <g opacity="0.9">
+    <path d="M140 260C140 231.281 163.281 208 192 208H306C334.719 208 358 231.281 358 260C358 288.719 334.719 312 306 312H192C163.281 312 140 288.719 140 260Z" fill="#FFFFFF" fill-opacity="0.92"/>
+    <rect x="170" y="238" width="116" height="20" rx="10" fill="#FFC05F"/>
+    <rect x="170" y="266" width="184" height="14" rx="7" fill="#FEB2CF"/>
+  </g>
+  <path d="M436 420C420 418 410 407 410 392C410 375 424 362 442 362C457 362 466 368 474 378C474 378 490 356 514 360C534 364 546 382 544 400C542 418 530 426 512 432C490 440 460 422 460 422C454 424 446 420 436 420Z" fill="url(#g3)" opacity="0.8"/>
+</svg>
