@@ -1,19 +1,35 @@
-﻿# Repository Guidelines
+# Repository Guidelines
 
 ## Project Structure & Module Organization
-This site is a single-page marketing experience served from the repository root. `index.html` contains all markup and localized copy; extend it with semantic sections rather than adding multiple pages unless routing is introduced. Shared styles live in `style.css`, organized with comment blocks per layout section. Image assets such as `08_...png` currently sit alongside the page; prefer future illustrations and downloads under an `assets/` directory with ASCII filenames to avoid encoding issues in tooling.
+- `index.html` contains all markup, copy, and translation comments; extend with semantic `<section>` blocks rather than new pages.
+- `style.css` centralizes styling with section headers; reuse `.container` and layout utilities before adding new rules.
+- `app.js` hosts lightweight interactions; keep helpers modular and document any external API assumptions inline.
+- `assets/` stores optimized imagery; use ASCII filenames and note licenses in PRs. Legacy files in the root may be relocated during cleanup.
 
 ## Build, Test, and Development Commands
-Open `index.html` directly for quick copy reviews. For a local server with live reload headers, run `python -m http.server 8000` and browse to `http://localhost:8000/index.html`. Alternatively, `npx serve .` mirrors production caching and is useful before deployment.
+- Open `index.html` directly for quick wording reviews.
+- `python -m http.server 8000` serves the site locally at `http://localhost:8000/index.html` with basic caching.
+- `npx serve .` mirrors production headers; run prior to deployments or Lighthouse audits.
+- Stop servers with `Ctrl+C` to free the port.
 
 ## Coding Style & Naming Conventions
-Use two-space indentation for HTML and indent CSS declarations on their own lines as in the existing file. Favor descriptive, hyphenated class names (`.hero-banner`, `.cta-button`) and reuse utility classes like `.container` where possible. Keep CSS custom properties in lower-case kebab case under `:root` and group related tokens together. When editing copy, preserve full-width punctuation and Japanese typography.
+- Format HTML with two-space indentation; nest attributes on-line and avoid trailing whitespace.
+- In CSS, keep declarations on separate lines, group tokens under `:root`, and favor hyphenated class names like `.hero-banner`.
+- JavaScript should default to `const`/`let`, prefer arrow functions for simple callbacks, and align with existing semicolon usage.
+- Preserve Japanese typography, including full-width punctuation and inline glossary comments.
 
 ## Testing Guidelines
-There is no automated suite yet, so document manual checks in pull requests. Validate layout at 320px, 768px, and 1024px widths, and confirm skip-link focus is visible. Run `npx lighthouse http://localhost:8000/index.html --view` when changing performance-critical assets, and capture before/after scores. Record any accessibility contrast adjustments made in `style.css`.
+- No automated suite exists; capture manual verification notes in each PR.
+- Validate layout at 320px, 768px, and 1024px widths; ensure the skip link remains visible when focused.
+- After asset or performance tweaks, run `npx lighthouse http://localhost:8000/index.html --view` and archive before/after scores.
+- Record any contrast adjustments or accessibility fixes inside `style.css` comments.
 
 ## Commit & Pull Request Guidelines
-Follow Conventional Commits (`feat: add comparison table`, `fix: adjust hero spacing`) to keep history searchable. Each PR should include a concise summary, linked issue or task ID, before/after screenshots for UI updates, and notes on manual verification steps. Request review from a teammate familiar with the Japanese content when updating localized copy.
+- Follow Conventional Commits (e.g., `feat: add growth scenario slider`, `fix: correct hero spacing`).
+- PRs should summarize intent, reference the related task or issue, and attach updated screenshots for UI changes.
+- List manual test steps, note localization reviewers when copy changes, and call out dependencies or follow-up work.
 
 ## Assets & Localization
-Store translatable strings in `index.html` and keep alternative text synchronized between Japanese and English comments when provided. Compress new imagery before committing and note the source license in the PR description. Maintain consistent tone with existing financial guidance and flag any terminology that needs SME validation.
+- House translatable strings in `index.html`; keep alt text synchronized between Japanese content and any English guidance.
+- Compress new imagery before committing, store source credits in the PR, and favor SVG or WebP when available.
+- Flag any terms needing SME validation so financial tone stays consistent.

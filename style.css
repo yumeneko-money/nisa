@@ -48,3 +48,12 @@ input[type=number]:focus{border-color:var(--accent)}
 
 .site-footer{border-top:1px solid #e4efe8;background:#fff;margin-top:24px}
 .footer-inner{padding:16px 0}
+@media (max-width:600px){
+  .kpies{grid-template-columns:1fr}
+  #form{gap:12px}
+  .card{padding:12px}
+  #form label{font-size:.95rem}
+  input[type=number]{padding:10px 38px 10px 10px;font-size:1rem}
+  .suffix{font-size:.85rem}
+  .actions{gap:10px}
+}
